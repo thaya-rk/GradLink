@@ -21,7 +21,6 @@ public class Student {
     private LocalDate profileCreationDate = LocalDate.now();
     private Boolean isCurrentStudent = true;
     private String batch;
-
     private String department;  // Added department field
 
     @ManyToOne

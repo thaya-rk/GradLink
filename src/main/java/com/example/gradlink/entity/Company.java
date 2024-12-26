@@ -17,6 +17,17 @@ public class Company {
     private String eligibilityCriteria;
     private String applicationDeadline;
     private Boolean isActive = true;
+    @Column(name = "hr_email")
+    private String hrEmail;
+
+    public String getHrEmail() {
+        return hrEmail;
+    }
+
+    public void setHrEmail(String hrEmail) {
+        this.hrEmail = hrEmail;
+    }
+
 
     @OneToMany(mappedBy = "company")
     private List<StudentApplication> studentApplications;  // List of student applications to the company

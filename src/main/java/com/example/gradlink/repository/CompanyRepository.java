@@ -15,9 +15,5 @@ public interface CompanyRepository extends JpaRepository<Company, Long> {
     // Find companies by HR email
     List<Company> findByHrEmail(String hrEmail);
 
-    // Find companies by location
-    List<Company> findByLocation(String location);
 
-    // Find companies by hiring status
-    List<Company> findByHiringStatus(Boolean hiringStatus);
 }

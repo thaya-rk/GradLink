@@ -10,10 +10,6 @@ import java.util.List;
 public interface StudentRepository extends JpaRepository<Student,Long> {
     List<Student> findByName(String name);
 
-    List<Student> findByIsCurrentStudentTrue();
-    List<Student> FindByIsCurrentStudentFalse();
-    List<Student> findByBatch(String batch);
-    List<Student> findByTpoId(Long tpoId);
-    List<Student> findByDept(String dept);
+
 
 }

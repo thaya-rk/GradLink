@@ -10,9 +10,5 @@ import java.util.Optional;
 @Repository
 public interface TPORepository extends JpaRepository<TPO, Long> {
 
-    // Find TPO by email
-    Optional<TPO> findByEmail(String email);
 
-    // Find TPOs by department
-    List<TPO> findByDept(String dept);
 }
