@@ -1,6 +1,6 @@
-package com.example.gradlink.service;
+package com.thaya.gradlink.service;
 
-import com.example.gradlink.entity.Company;
+import com.thaya.gradlink.entity.Company;
 import java.util.List;
 import java.util.Optional;
 

@@ -1,8 +1,8 @@
-package com.example.gradlink.service.impl;
+package com.thaya.gradlink.service.impl;
 
-import com.example.gradlink.entity.Student;
-import com.example.gradlink.repository.StudentRepository;
-import com.example.gradlink.service.StudentService;
+import com.thaya.gradlink.entity.Student;
+import com.thaya.gradlink.repository.StudentRepository;
+import com.thaya.gradlink.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

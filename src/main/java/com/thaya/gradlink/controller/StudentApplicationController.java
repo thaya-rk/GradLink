@@ -1,7 +1,7 @@
-package com.example.gradlink.controller;
+package com.thaya.gradlink.controller;
 
-import com.example.gradlink.entity.StudentApplication;
-import com.example.gradlink.service.StudentApplicationService;
+import com.thaya.gradlink.entity.StudentApplication;
+import com.thaya.gradlink.service.StudentApplicationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

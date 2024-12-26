@@ -1,4 +1,4 @@
-package com.example.gradlink.entity;
+package com.thaya.gradlink.entity;
 
 import jakarta.persistence.*;
 import java.time.LocalDate;

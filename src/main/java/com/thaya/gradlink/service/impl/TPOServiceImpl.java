@@ -1,8 +1,8 @@
-package com.example.gradlink.service.impl;
+package com.thaya.gradlink.service.impl;
 
-import com.example.gradlink.entity.TPO;
-import com.example.gradlink.repository.TPORepository;
-import com.example.gradlink.service.TPOService;
+import com.thaya.gradlink.entity.TPO;
+import com.thaya.gradlink.repository.TPORepository;
+import com.thaya.gradlink.service.TPOService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

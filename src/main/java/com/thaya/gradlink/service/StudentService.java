@@ -1,5 +1,5 @@
-package com.example.gradlink.service;
-import com.example.gradlink.entity.Student;
+package com.thaya.gradlink.service;
+import com.thaya.gradlink.entity.Student;
 import java.util.List;
 public interface StudentService {
     Student createStudent(Student student);

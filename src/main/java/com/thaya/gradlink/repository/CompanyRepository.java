@@ -1,6 +1,6 @@
-package com.example.gradlink.repository;
+package com.thaya.gradlink.repository;
 
-import com.example.gradlink.entity.Company;
+import com.thaya.gradlink.entity.Company;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

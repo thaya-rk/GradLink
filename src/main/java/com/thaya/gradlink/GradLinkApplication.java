@@ -1,4 +1,4 @@
-package com.example.gradlink;
+package com.thaya.gradlink;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
