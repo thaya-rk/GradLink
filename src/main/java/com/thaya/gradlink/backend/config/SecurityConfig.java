@@ -23,7 +23,8 @@ public class SecurityConfig {
                 .authorizeHttpRequests(authorize -> authorize
                         .requestMatchers("/users/register").permitAll()
                         .anyRequest().authenticated()
-                );
+                )
+                .httpBasic();
 
         return http.build();
     }
