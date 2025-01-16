@@ -15,9 +15,6 @@ public class TPO {
     private String phone;
     private String department;
 
-    @OneToOne
-    @JoinColumn(name = "user_id", nullable = false)
-    private User user;
 
 
     @OneToMany(mappedBy = "tpo")

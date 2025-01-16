@@ -1,0 +1,41 @@
+# run the container -> docker-compose up --build
+
+version: '3.9'
+services:
+  db:
+    image: mysql:8.0
+    container_name: mysql-container
+    environment:
+      MYSQL_ROOT_PASSWORD: thaya@sql
+      MYSQL_DATABASE: gradlink
+    ports:
+      - "3307:3306"
+    networks:
+      - gradlink-network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 30s
+      retries: 5
+
+  # Spring Boot backend service
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: springboot-backend
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/gradlink
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: thaya@sql
+      SPRING_DATASOURCE_DRIVER-CLASS-NAME: com.mysql.cj.jdbc.Driver
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - gradlink-network
+
+networks:
+  gradlink-network:
+    driver: bridge

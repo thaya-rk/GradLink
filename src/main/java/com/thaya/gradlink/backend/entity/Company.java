@@ -1,5 +1,6 @@
 package com.thaya.gradlink.backend.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import java.util.List;
 
@@ -16,25 +17,13 @@ public class Company {
     private String jobDescription;
     private String eligibilityCriteria;
     private String applicationDeadline;
-    private Boolean isActive = true;
-    @Column(name = "hr_email")
+    private boolean isActive;
     private String hrEmail;
 
-    public String getHrEmail() {
-        return hrEmail;
-    }
-
-    public void setHrEmail(String hrEmail) {
-        this.hrEmail = hrEmail;
-    }
-
-
+    // Use @JsonIgnore to prevent the studentApplications field from being serialized
     @OneToMany(mappedBy = "company")
-    private List<StudentApplication> studentApplications;  // List of student applications to the company
-
-    @OneToOne
-    @JoinColumn(name = "user_id", nullable = false)
-    private User user;
+    @JsonIgnore
+    private List<StudentApplication> studentApplications;
 
     // Getters and setters
     public long getId() {
@@ -93,12 +82,20 @@ public class Company {
         this.applicationDeadline = applicationDeadline;
     }
 
-    public Boolean getIsActive() {
+    public boolean isActive() {
         return isActive;
     }
 
-    public void setIsActive(Boolean isActive) {
-        this.isActive = isActive;
+    public void setActive(boolean active) {
+        isActive = active;
+    }
+
+    public String getHrEmail() {
+        return hrEmail;
+    }
+
+    public void setHrEmail(String hrEmail) {
+        this.hrEmail = hrEmail;
     }
 
     public List<StudentApplication> getStudentApplications() {

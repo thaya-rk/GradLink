@@ -1,0 +1,28 @@
+# Maven-specific files and folders
+#target/
+*.iml
+.idea/
+*.log
+*.bak
+mvnw*
+pom.xml.*.backup
+
+# IDE-specific files and folders
+*.iml
+.idea/
+*.vscode/
+*.classpath
+*.project
+*.settings/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.swp
+*.swo

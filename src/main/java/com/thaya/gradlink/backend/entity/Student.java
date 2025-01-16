@@ -11,7 +11,10 @@ public class Student {
     private long id;
 
     private String name;
+
+    @Column(unique = true)
     private String email;
+
     private String phone;
     private Integer school10thPercentage;
     private Integer school12thPercentage;
@@ -27,9 +30,6 @@ public class Student {
     @JoinColumn(name = "tpo_id")
     private TPO tpo;
 
-    @OneToOne
-    @JoinColumn(name = "user_id", nullable = false)
-    private User user;
 
 
     // Getters and setters

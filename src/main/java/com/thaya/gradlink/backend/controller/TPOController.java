@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/tpos")
+@RequestMapping("/tpo")
 public class TPOController {
 
     private final TPOService tpoService;

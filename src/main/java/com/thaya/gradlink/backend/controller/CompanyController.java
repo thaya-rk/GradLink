@@ -37,10 +37,13 @@ public class CompanyController {
 
     @GetMapping("/{id}")
     public ResponseEntity<Company> getCompanyById(@PathVariable Long id) {
-        Optional<Company> company = companyService.getCompanyById(id);
-        return company.map(ResponseEntity::ok).orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
+        try {
+            Company company = companyService.getCompanyById(id); // Directly get the company
+            return new ResponseEntity<>(company, HttpStatus.OK);  // Return the company in the response
+        } catch (RuntimeException e) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND); // Return NOT_FOUND if company doesn't exist
+        }
     }
-
     @GetMapping
     public ResponseEntity<List<Company>> getAllCompanies() {
         List<Company> companies = companyService.getAllCompanies();
